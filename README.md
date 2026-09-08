@@ -6,15 +6,13 @@ Os enunciados vêm do [e-book da disciplina](https://andresjesse.github.io/ebook
 
 ## Estrutura
 
-Este é um único projeto Expo. Cada atividade fica na sua própria pasta, e o
-`App.js` importa a atividade que está sendo exibida no momento.
+Cada atividade é um projeto Expo independente, com o seu próprio
+`package.json`. Rode `npm install` dentro da pasta da atividade que quiser
+abrir.
 
 ```
-├── App.js                     # importa e renderiza a atividade atual
-├── atv1/
-│   └── CatalogScreen.jsx      # Atividade 1: Catálogo de Itens Dinâmico
-├── app.json
-└── package.json
+├── atv1/    # projeto Expo em JavaScript (SDK 57)
+└── atv2/    # projeto base do professor, em TypeScript + expo-router (SDK 54)
 ```
 
 ## Atividades
@@ -22,10 +20,12 @@ Este é um único projeto Expo. Cada atividade fica na sua própria pasta, e o
 | # | Atividade | Conteúdo praticado |
 |---|-----------|--------------------|
 | 1 | [Catálogo de Itens Dinâmico](atv1/CatalogScreen.jsx) | Interpolação de variáveis, loop de renderização com `.map()`, renderização condicional |
+| 2 | [Styles e Layouts](atv2/) | Flexbox (`flexDirection`, `justifyContent`, `alignItems`, `gap`), `StyleSheet`, componentes com props |
 
 ## Como rodar
 
 ```bash
+cd atv1        # ou atv2
 npm install
 npx expo start
 ```
