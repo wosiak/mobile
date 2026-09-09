@@ -22,7 +22,6 @@ Clonado do branch `main`, commit `768758b` ("2026.2 base code").
 
 ## Acabamento adicional
 
-- `MapPreview.tsx` — prévia do mapa com os pins (`justifyContent: space-around`)
 - `Footer/Button.tsx` — os três botões eram idênticos e fixos no código; passaram
   a receber `icon`, `label` e `active` por props, virando Check in / Explore / Profile
 - `Header/SearchBar.tsx` — placeholder ajustado para o texto do print
@@ -33,8 +32,8 @@ Clonado do branch `main`, commit `768758b` ("2026.2 base code").
   `flex: 1` no meio (ocupa o espaço que sobra) e rodapé fixo. O botão
   "Select Starter" fica acima da barra de navegação por causa dessa ordem na
   coluna, não por posicionamento absoluto.
-- **Poucos tamanhos fixos.** O card do mapa e o quadrado da logo usam
-  `aspectRatio`, então a altura vem da largura e se adapta à tela. O único
+- **Poucos tamanhos fixos.** O quadrado da logo usa `aspectRatio`,
+  então a altura vem da largura e se adapta à tela. O único
   tamanho fixo é a largura do card do carrossel (96), necessária porque itens
   em `ScrollView horizontal` não têm largura de referência.
 - As logos das academias são quadrados coloridos com as iniciais, no lugar das

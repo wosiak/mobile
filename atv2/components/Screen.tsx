@@ -3,7 +3,6 @@ import { ScrollView, StatusBar, StyleSheet, View } from "react-native";
 import FilterChips from "./FilterChips";
 import Footer from "./Footer";
 import Header from "./Header";
-import MapPreview from "./MapPreview";
 import NearYou from "./NearYou";
 import SelectButton from "./SelectButton";
 
@@ -19,7 +18,6 @@ export default function Screen() {
 
       <ScrollView style={styles.content}>
         <NearYou />
-        <MapPreview />
       </ScrollView>
 
       <SelectButton />
