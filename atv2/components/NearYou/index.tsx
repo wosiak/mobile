@@ -1,51 +1,8 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { gyms } from "../gyms";
 import GymCard from "./GymCard";
 import MapPreview from "./MapPreview";
-
-// Academias exibidas no carrossel
-const gyms = [
-  {
-    name: "Academia Stylo Fitness",
-    rating: 4.9,
-    distance: 1.6,
-    logoColor: "#2b2b2b",
-    initials: "SF",
-    initialsColor: "#e8b64c",
-  },
-  {
-    name: "Academia Extreme",
-    rating: 4.51,
-    distance: 3.0,
-    logoColor: "#111c3a",
-    initials: "X",
-    initialsColor: "#2fe0a6",
-  },
-  {
-    name: "BJ FIT",
-    rating: 4.83,
-    distance: 3.4,
-    logoColor: "#000000",
-    initials: "BJ",
-    initialsColor: "#f5c518",
-  },
-  {
-    name: "Academia Templo Fitness",
-    rating: 4.52,
-    distance: 6.6,
-    logoColor: "#fdf6e8",
-    initials: "TF",
-    initialsColor: "#c08a2e",
-  },
-  {
-    name: "Academia Hard",
-    rating: 4.62,
-    distance: 6.6,
-    logoColor: "#5c5c66",
-    initials: "AH",
-    initialsColor: "#ffffff",
-  },
-];
 
 export default function NearYou() {
   return (
@@ -64,15 +21,7 @@ export default function NearYou() {
         contentContainerStyle={styles.carousel}
       >
         {gyms.map((gym, index) => (
-          <GymCard
-            key={index}
-            name={gym.name}
-            rating={gym.rating}
-            distance={gym.distance}
-            logoColor={gym.logoColor}
-            initials={gym.initials}
-            initialsColor={gym.initialsColor}
-          />
+          <GymCard key={index} gym={gym} />
         ))}
       </ScrollView>
 

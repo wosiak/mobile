@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
 
-// Tela da atividade 1
 import CatalogScreen from './CatalogScreen';
 
 export default function App() {
