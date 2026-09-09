@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
-// Nome do usuário que vai aparecer na saudação (interpolação de variável)
+// Nome que vai aparecer na saudação (interpolação de variável)
 const userName = 'Eduardo';
 
 // Lista de dados (array de objetos) que será percorrida com .map()
@@ -30,7 +30,7 @@ export default function CatalogScreen() {
           <View style={styles.cardHeader}>
             <Text style={styles.name}>{item.name}</Text>
 
-            {/* Renderização condicional: o badge só aparece se onSale for true */}
+            {/* Renderização condicional - curto circuito: ele para no que é false */}
             {item.onSale && (
               <View style={styles.badge}>
                 <Text style={styles.badgeText}>OFERTA</Text>
@@ -41,8 +41,7 @@ export default function CatalogScreen() {
           {/* Categoria do item */}
           <Text style={styles.category}>Categoria: {item.category}</Text>
 
-          {/* Operador ternário: se estiver em promoção o preço fica verde,
-              senão fica na cor padrão (cinza escuro) */}
+          {/* Operador ternário */}
           <Text style={[styles.price, { color: item.onSale ? '#16a34a' : '#334155' }]}>
             R$ {item.price.toFixed(2)}
           </Text>
