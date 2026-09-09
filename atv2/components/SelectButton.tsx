@@ -1,25 +1,20 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-type PrimaryButtonProps = {
-  label: string;
-};
-
-export default function PrimaryButton({ label }: PrimaryButtonProps) {
+export default function SelectButton() {
+  // O botão fica preso embaixo, acima da barra de navegação. Como a tela é
+  // uma coluna flex, isso vem da ordem dos elementos, sem position absolute.
   return (
-    // O botão fica preso na parte de baixo da tela, acima da barra de navegação.
-    // Como está numa coluna flex, não precisa de position absolute pra "flutuar".
-    <View style={styles.wrapper}>
+    <View style={styles.container}>
       <View style={styles.button}>
-        <Text style={styles.label}>{label}</Text>
+        <Text style={styles.label}>Select Starter</Text>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
-    backgroundColor: "#fff",
+  container: {
     paddingHorizontal: 16,
     paddingVertical: 12,
   },
@@ -27,12 +22,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#e0446d",
     borderRadius: 28,
     paddingVertical: 18,
+    // Centraliza o texto nos dois sentidos
     alignItems: "center",
     justifyContent: "center",
   },
   label: {
-    color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
+    color: "#fff",
   },
 });
