@@ -1,31 +1,28 @@
 import React from "react";
 import { ScrollView, StatusBar, StyleSheet, View } from "react-native";
-import Filters from "./Filters";
+import FilterChips from "./FilterChips";
 import Footer from "./Footer";
 import Header from "./Header";
+import MapPreview from "./MapPreview";
 import NearYou from "./NearYou";
-import PrimaryButton from "./PrimaryButton";
-import TopPicks from "./TopPicks";
+import SelectButton from "./SelectButton";
 
 export default function Screen() {
   return (
-    // A tela toda é uma coluna. O ScrollView do meio tem flex: 1,
-    // então ele ocupa o espaço que sobra entre os filtros e o botão.
+    // A tela é uma coluna. O ScrollView do meio tem flex: 1, então ocupa
+    // todo o espaço que sobra e empurra o botão e o rodapé para baixo.
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
 
-      {/* Topo fixo: localização, busca, abas e filtros */}
       <Header />
-      <Filters />
+      <FilterChips />
 
-      {/* Conteúdo que rola */}
       <ScrollView style={styles.content}>
         <NearYou />
-        <TopPicks />
+        <MapPreview />
       </ScrollView>
 
-      {/* Rodapé fixo: botão de ação e barra de navegação */}
-      <PrimaryButton label="Select Starter" />
+      <SelectButton />
       <Footer />
     </View>
   );
