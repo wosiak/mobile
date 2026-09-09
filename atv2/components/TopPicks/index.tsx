@@ -1,34 +1,11 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import GymCard from "../NearYou/GymCard";
+import { gyms } from "../gyms";
 
-// Reaproveita o mesmo GymCard da seção "Near you", só com outros dados
-const picks = [
-  {
-    name: "Academia Extreme",
-    rating: 4.51,
-    distance: 3.0,
-    logoColor: "#111c3a",
-    initials: "X",
-    initialsColor: "#2fe0a6",
-  },
-  {
-    name: "Academia Stylo Fitness",
-    rating: 4.9,
-    distance: 1.6,
-    logoColor: "#2b2b2b",
-    initials: "SF",
-    initialsColor: "#e8b64c",
-  },
-  {
-    name: "BJ FIT",
-    rating: 4.83,
-    distance: 3.4,
-    logoColor: "#000000",
-    initials: "BJ",
-    initialsColor: "#f5c518",
-  },
-];
+// "Top picks" são as academias melhor avaliadas: a mesma lista, ordenada pela nota.
+// O [...gyms] cria uma copia, para o sort nao mexer na ordem da lista original.
+const topPicks = [...gyms].sort((a, b) => b.rating - a.rating);
 
 export default function TopPicks() {
   return (
@@ -40,16 +17,8 @@ export default function TopPicks() {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.carousel}
       >
-        {picks.map((pick, index) => (
-          <GymCard
-            key={index}
-            name={pick.name}
-            rating={pick.rating}
-            distance={pick.distance}
-            logoColor={pick.logoColor}
-            initials={pick.initials}
-            initialsColor={pick.initialsColor}
-          />
+        {topPicks.map((gym, index) => (
+          <GymCard key={index} gym={gym} />
         ))}
       </ScrollView>
     </View>

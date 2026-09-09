@@ -4,6 +4,7 @@ Engenharia reversa da tela de busca do app **Wellhub**, a partir do print
 `Screenshot_Wellhub.jpg`, usando Flexbox e `StyleSheet`.
 
 Projeto base do professor: https://github.com/university-lessons/pdm-lesson-styles-layouts
+Clonado do branch `main`, commit `768758b` ("2026.2 base code").
 
 ## O que já vinha no projeto base
 
@@ -18,6 +19,7 @@ Projeto base do professor: https://github.com/university-lessons/pdm-lesson-styl
 | `Header/CategoryTabs.tsx` | Abas de categoria roláveis, com barra na aba ativa | `ScrollView horizontal`, `gap`, `alignItems`, `alignSelf: stretch` |
 | `Filters/Chip.tsx` | Chip de filtro em duas versões (preenchido e vazado) | `flexDirection: row`, `alignItems: center`, `gap` |
 | `Filters/index.tsx` | Linha de filtros | `flexDirection: row`, `gap` |
+| `gyms.ts` | Lista de academias e o tipo `Gym`, usados pelas duas seções | — |
 | `NearYou/GymCard.tsx` | Card da academia: logo, nome, nota e distância | coluna com `alignItems: center`, linhas internas com `gap` |
 | `NearYou/MapPreview.tsx` | Prévia do mapa com os pins | `flexDirection: row`, `justifyContent: space-around`, `aspectRatio` |
 | `NearYou/index.tsx` | Seção "Near you" com carrossel horizontal | `justifyContent: space-between` no cabeçalho, carrossel com `gap` |

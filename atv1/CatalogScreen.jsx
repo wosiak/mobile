@@ -1,10 +1,7 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
-// Nome do usuário que vai aparecer na saudação (interpolação de variável)
-const userName = 'Eduardo';
+const userName = 'Professor';
 
-// Lista de dados (array de objetos) que será percorrida com .map()
-// Tema escolhido: Garagem de Carros
 const dataList = [
   { name: 'Jeep Compass', price: 145900, category: 'SUV', onSale: true },
   { name: 'Volkswagen Gol', price: 62500, category: 'Hatch', onSale: false },
@@ -12,25 +9,19 @@ const dataList = [
   { name: 'Fiat Toro', price: 132400, category: 'Picape', onSale: true },
 ];
 
-// Tela da Atividade 1: Catálogo de Itens Dinâmico
 export default function CatalogScreen() {
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
-      {/* Cabeçalho: saudação usando interpolação da variável userName */}
       <Text style={styles.greeting}>Olá, {userName}! 👋</Text>
       <Text style={styles.subtitle}>
         Temos {dataList.length} veículos disponíveis hoje.
       </Text>
 
-      {/* Loop de renderização: cria um card para cada item do dataList.
-          O segundo parâmetro (index) é usado como key, conforme pedido na atividade. */}
-      {dataList.map((item, index) => (
+     {dataList.map((item, index) => (
         <View key={index} style={styles.card}>
-          {/* Linha do topo: nome do item e o badge de oferta */}
           <View style={styles.cardHeader}>
             <Text style={styles.name}>{item.name}</Text>
 
-            {/* Renderização condicional: o badge só aparece se onSale for true */}
             {item.onSale && (
               <View style={styles.badge}>
                 <Text style={styles.badgeText}>OFERTA</Text>
@@ -41,9 +32,7 @@ export default function CatalogScreen() {
           {/* Categoria do item */}
           <Text style={styles.category}>Categoria: {item.category}</Text>
 
-          {/* Operador ternário: se estiver em promoção o preço fica verde,
-              senão fica na cor padrão (cinza escuro) */}
-          <Text style={[styles.price, { color: item.onSale ? '#16a34a' : '#334155' }]}>
+           <Text style={[styles.price, { color: item.onSale ? '#16a34a' : '#334155' }]}>
             R$ {item.price.toFixed(2)}
           </Text>
         </View>
@@ -52,7 +41,6 @@ export default function CatalogScreen() {
   );
 }
 
-// Estilos da tela
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
