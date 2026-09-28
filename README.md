@@ -12,7 +12,8 @@ abrir.
 
 ```
 ├── atv1/    # projeto Expo em JavaScript (SDK 57)
-└── atv2/    # projeto base do professor, em TypeScript + expo-router (SDK 54)
+├── atv2/    # projeto base do professor, em TypeScript + expo-router (SDK 54)
+└── atv3/    # projeto Expo em TypeScript (SDK 57)
 ```
 
 ## Atividades
@@ -21,6 +22,7 @@ abrir.
 |---|-----------|--------------------|
 | 1 | [Catálogo de Itens Dinâmico](atv1/CatalogScreen.jsx) | Interpolação de variáveis, loop de renderização com `.map()`, renderização condicional |
 | 2 | [Styles e Layouts](atv2/) | Flexbox (`flexDirection`, `justifyContent`, `alignItems`, `gap`), `StyleSheet`, componentes com props |
+| 3 | [Componente de Perfil de Usuário](atv3/) | Componente reutilizável, props obrigatórias e opcionais com interface TypeScript, `Image` de rede, `Pressable` |
 
 ## Como rodar
 
