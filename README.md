@@ -14,7 +14,8 @@ abrir.
 ├── atv1/    # projeto Expo em JavaScript (SDK 57)
 ├── atv2/    # projeto base do professor, em TypeScript + expo-router (SDK 54)
 ├── atv3/    # projeto Expo em TypeScript (SDK 57)
-└── atv4/    # projeto Expo em TypeScript (SDK 57)
+├── atv4/    # projeto Expo em TypeScript (SDK 57)
+└── atv5/    # projeto Expo em TypeScript (SDK 57)
 ```
 
 ## Atividades
@@ -25,6 +26,7 @@ abrir.
 | 2 | [Styles e Layouts](atv2/) | Flexbox (`flexDirection`, `justifyContent`, `alignItems`, `gap`), `StyleSheet`, componentes com props |
 | 3 | [Componente de Perfil de Usuário](atv3/) | Componente reutilizável, props obrigatórias e opcionais com interface TypeScript, `Image` de rede, `Pressable` |
 | 4 | [useState](atv4/) | Estado com `useState` tipado, `TextInput` com `onChangeText`, botão `disabled`, renderização condicional por estado |
+| 5 | [useEffect](atv5/) | Ciclo de vida com `useEffect`: efeito ao montar, efeito com dependência, função de limpeza ao desmontar |
 
 ## Como rodar
 
