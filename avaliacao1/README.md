@@ -1,4 +1,4 @@
-# Prática de Implementação 1 — Formulário
+# Avaliação 1 — Formulário
 
 Tela de inscrição em um racha de futebol. Formulário que valida os campos em
 tempo real e libera o botão só quando tudo está correto.
@@ -6,7 +6,7 @@ tempo real e libera o botão só quando tudo está correto.
 ## Arquivos
 
 ```
-pratica1/
+avaliacao1/
 ├── App.tsx                   # a tela, os estados e as validações
 ├── components/
 │   ├── FormInput.tsx         # campo reutilizável com label e erro
