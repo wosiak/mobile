@@ -29,6 +29,9 @@ avaliacao1/
 | 9 | `useEffect` habilitando o botão | efeito com `[playerName, position, shirtNumber]` |
 | 10 | `onSubmit` logando todos os campos | função `onSubmit` |
 
+Além do log pedido no requisito 10, a tela mostra "Inscrição confirmada!" abaixo
+do botão, para o usuário ver que o envio aconteceu.
+
 ## As validações
 
 | Campo | Regra | Mensagem |

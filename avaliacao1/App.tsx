@@ -32,6 +32,9 @@ export default function App() {
   // --- Requisito 9: controla se o botão pode ser pressionado ---
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
+  // Mostra a confirmação na tela depois que a inscrição é enviada
+  const [submitted, setSubmitted] = useState<boolean>(false);
+
   // REQUISITO 2 — array vazio: roda uma vez, ao abrir a tela.
   // Mostra o aviso e o esconde depois de 2 segundos.
   useEffect(() => {
@@ -77,6 +80,8 @@ export default function App() {
     console.log('Posição:', position);
     console.log('Número da camisa:', shirtNumber);
     console.log('Tem uniforme próprio:', hasUniform);
+
+    setSubmitted(true);
   }
 
   return (
@@ -132,6 +137,9 @@ export default function App() {
         {/* REQUISITOS 8 e 10 */}
         <FormButton title="Confirmar inscrição" onPress={onSubmit} disabled={!isFormValid} />
 
+        {/* Confirmação visível na tela, além do log no console */}
+        {submitted ? <Text style={styles.success}>Inscrição confirmada!</Text> : null}
+
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
@@ -177,6 +185,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  success: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#16a34a',
+    textAlign: 'center',
   },
   switchLabel: {
     fontSize: 15,
