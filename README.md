@@ -15,7 +15,8 @@ abrir.
 ├── atv2/    # projeto base do professor, em TypeScript + expo-router (SDK 54)
 ├── atv3/    # projeto Expo em TypeScript (SDK 57)
 ├── atv4/    # projeto Expo em TypeScript (SDK 57)
-└── atv5/    # projeto Expo em TypeScript (SDK 57)
+├── atv5/    # projeto Expo em TypeScript (SDK 57)
+└── pratica1/ # avaliação 1 — formulário (TypeScript, SDK 57)
 ```
 
 ## Atividades
@@ -27,6 +28,7 @@ abrir.
 | 3 | [Componente de Perfil de Usuário](atv3/) | Componente reutilizável, props obrigatórias e opcionais com interface TypeScript, `Image` de rede, `Pressable` |
 | 4 | [useState](atv4/) | Estado com `useState` tipado, `TextInput` com `onChangeText`, botão `disabled`, renderização condicional por estado |
 | 5 | [useEffect](atv5/) | Ciclo de vida com `useEffect`: efeito ao montar, efeito com dependência, função de limpeza ao desmontar |
+| — | [Prática 1 (avaliação)](pratica1/) | Formulário completo: componentes reutilizáveis, validação em tempo real, `Switch`, `SafeAreaView` e `ScrollView` |
 
 ## Como rodar
 
