@@ -18,7 +18,8 @@ abrir.
 ├── atv5/    # projeto Expo em TypeScript (SDK 57)
 ├── avaliacao1/ # avaliação 1 — formulário (TypeScript, SDK 57)
 ├── atv6/    # projeto Expo com expo-router (TypeScript, SDK 58)
-└── atv7/    # projeto Expo em TypeScript (SDK 58)
+├── atv7/    # projeto Expo em TypeScript (SDK 58)
+└── atv8/    # projeto Expo em TypeScript (SDK 58)
 ```
 
 ## Atividades
@@ -32,6 +33,7 @@ abrir.
 | 5 | [useEffect](atv5/) | Ciclo de vida com `useEffect`: efeito ao montar, efeito com dependência, função de limpeza ao desmontar |
 | 6 | [Roteamento](atv6/) | Expo Router: `<Link>`, `router.push()`, `router.back()`, rotas dinâmicas e `useLocalSearchParams` |
 | 7 | [Listas](atv7/) | `SectionList` com 1000 itens, agrupamento por categoria, cabeçalho e rodapé de seção |
+| 8 | [Context API](atv8/) | Tema Dark/Light centralizado: `createContext`, Provider, hook `useTheme` e `Switch` |
 | — | [Avaliação 1](avaliacao1/) | Formulário completo: componentes reutilizáveis, validação em tempo real, `Switch`, `SafeAreaView` e `ScrollView` |
 
 ## Como rodar
